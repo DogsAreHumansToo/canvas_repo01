@@ -9,9 +9,23 @@ public class PlayerMovementScript : MonoBehaviour
     private Rigidbody2D body;
     private float horizontalInput;
 
+    private void OnEnable()
+    {
+        HealthScript.onPlayerDeath += DisablePlayerMovement;
+    }
+    private void OnDisable()
+    {
+        HealthScript.onPlayerDeath -= DisablePlayerMovement;
+    }
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        EnablePlayerMovement();
     }
 
     private void Update()
@@ -21,14 +35,28 @@ public class PlayerMovementScript : MonoBehaviour
         // movement input
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-        // flip sprite
-        if(horizontalInput > 0.01f)
+        if(body.bodyType != RigidbodyType2D.Static)
         {
-            transform.localScale = Vector3.one;
+            // flip sprite
+            if (horizontalInput > 0.01f)
+            {
+                transform.localScale = Vector3.one;
+            }
+            else if (horizontalInput < -0.01f)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
-        else if (horizontalInput < -0.01f)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+        
+    }
+
+    private void DisablePlayerMovement()
+    {
+        body.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void EnablePlayerMovement()
+    {
+        body.bodyType = RigidbodyType2D.Dynamic;
     }
 }
