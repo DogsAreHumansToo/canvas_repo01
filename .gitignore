@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#custom ignored folders
+Assets/Graphics/
+Assets/Graphics.meta
