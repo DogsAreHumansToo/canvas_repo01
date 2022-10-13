@@ -7,6 +7,8 @@ public class EnemyHitBox : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
 
+    private EnemySpawner enemySpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,14 @@ public class EnemyHitBox : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy died!");
+
+        Destroy(gameObject);
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemySpawner.enemiesInRoom--;
+        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        {
+            enemySpawner.spawnerDone = true;
+        }
 
         //Die Animation
 
