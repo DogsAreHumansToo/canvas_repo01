@@ -32,6 +32,7 @@ public class EnemyHitBox : MonoBehaviour
         //Die Animation
 
         //Disable the enemy
+        Destroy(gameObject);
     }
 
 
