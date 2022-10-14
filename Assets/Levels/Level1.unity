@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 574902017}
+  WinMenu: {fileID: 1230623619}
 --- !u!1 &163760529
 GameObject:
   m_ObjectHideFlags: 0

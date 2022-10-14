@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyHitBox : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
-    int enemyKilledCount = 0;
+    public static event Action playerWin;
 
+    PlayerCombat killCount;
     private EnemySpawner enemySpawner;
 
     // Start is called before the first frame update
@@ -24,18 +26,24 @@ public class EnemyHitBox : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+
+            killCount.enemyKilledCount++;
+            Debug.Log(killCount.enemyKilledCount);
             Die();
         }
+        
     }
 
     void Die()
     {
         Debug.Log("Enemy died!");
 
-        Destroy(gameObject);
+        
         enemySpawner = FindObjectOfType<EnemySpawner>();
         enemySpawner.enemiesInRoom--;
-        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        
+        
+        if (enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
         {
             enemySpawner.spawnerDone = true;
         }
@@ -43,7 +51,7 @@ public class EnemyHitBox : MonoBehaviour
         //Die Animation
 
         //Disable the enemy
-        enemyKilledCount++;
+        
         Destroy(gameObject);
     }
 

@@ -6,6 +6,7 @@ using UnityEngine;
 public class HealthScript : MonoBehaviour
 {
     public static event Action onPlayerDeath;
+   
 
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
