@@ -6,6 +6,7 @@ public class EnemyHitBox : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
+    int enemyKilledCount = 0;
 
     private EnemySpawner enemySpawner;
 
@@ -42,6 +43,7 @@ public class EnemyHitBox : MonoBehaviour
         //Die Animation
 
         //Disable the enemy
+        enemyKilledCount++;
         Destroy(gameObject);
     }
 
