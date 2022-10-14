@@ -8,8 +8,11 @@ public class EnemyBehaviourScript : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float speed;
     [SerializeField] private float damage;
-    
 
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
     private void Update()
     {
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
