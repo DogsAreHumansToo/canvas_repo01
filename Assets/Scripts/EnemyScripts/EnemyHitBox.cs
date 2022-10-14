@@ -26,15 +26,12 @@ public class EnemyHitBox : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-
-            killCount.enemyKilledCount++;
-            Debug.Log(killCount.enemyKilledCount);
             Die();
         }
         
     }
 
-    void Die()
+    public void Die()
     {
         Debug.Log("Enemy died!");
 
