@@ -6,6 +6,7 @@ public class PowerUp : MonoBehaviour
 {
     public float multiplier = 2;
     public float duration = 4;
+    public AudioSource pickUpSND;
 
     //public GameObject pickupEffect;
 
@@ -21,6 +22,7 @@ public class PowerUp : MonoBehaviour
         Debug.Log("Picked UP!");
         PlayerCombat stats = player.GetComponent<PlayerCombat>();
         stats.attackRate *= multiplier;
+        pickUpSND.Play();
 
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;

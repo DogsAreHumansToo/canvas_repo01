@@ -7,6 +7,9 @@ public class PlayerCombat : MonoBehaviour
 
     //public Animator animator;
 
+    public AudioSource enemyHitSound;
+    public AudioSource missedAttack;
+
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
@@ -26,7 +29,8 @@ public class PlayerCombat : MonoBehaviour
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
                 Debug.Log("attack");
-                
+                missedAttack.Play();
+
             }
         }
     }
@@ -42,13 +46,17 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
+            enemyHitSound.Play();
         }
     }
 
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
+        {
+           
             return;
+        }
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
