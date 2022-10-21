@@ -10,8 +10,15 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource enemyHitSound;
     public AudioSource missedAttack;
 
+    public GameObject player;
+
     public Transform attackPoint;
     public LayerMask enemyLayers;
+
+    [SerializeField]
+    Sprite attacksprite;
+    [SerializeField]
+    Sprite idleState;
 
     public float attackRange = 0.5f;
     public int attackDamage = 50;
@@ -31,9 +38,14 @@ public class PlayerCombat : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+                player.gameObject.GetComponent<SpriteRenderer>().sprite = attacksprite;
                 //Debug.Log("attack");
                 missedAttack.Play();
 
+            }
+            else
+            {
+                player.gameObject.GetComponent<SpriteRenderer>().sprite = idleState;
             }
         }
     }
@@ -45,6 +57,7 @@ public class PlayerCombat : MonoBehaviour
     {
         //Play attack animation
         //animator.SetTrigger("Attack");
+        
 
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
