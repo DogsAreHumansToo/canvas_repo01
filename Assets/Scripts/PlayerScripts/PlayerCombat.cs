@@ -31,7 +31,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
-                Debug.Log("attack");
+                //Debug.Log("attack");
                 missedAttack.Play();
 
             }
