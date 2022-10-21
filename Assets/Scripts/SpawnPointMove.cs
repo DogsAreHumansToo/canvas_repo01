@@ -26,19 +26,6 @@ public class SpawnPointMove : MonoBehaviour
         // movement input
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-        if (body.bodyType != RigidbodyType2D.Static)
-        {
-            // flip sprite
-            if (horizontalInput > 0.01f)
-            {
-                transform.localScale = Vector3.one;
-            }
-            else if (horizontalInput < -0.01f)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-        }
-
     }
     private void DisableMovement()
     {
