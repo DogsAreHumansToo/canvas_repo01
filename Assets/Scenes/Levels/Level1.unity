@@ -966,7 +966,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1748640805870423215, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
   m_PrefabInstance: {fileID: 1748640805558956995}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1748640805558956996}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca5d09e89ebf82646983ae65db72154f, type: 3}
@@ -2875,6 +2875,7 @@ MonoBehaviour:
   waveLevel: 1
   enemiesKilled: 0
   completeLevelUI: {fileID: 552643665}
+  player: {fileID: 1748640805558956996}
 --- !u!4 &1922929940
 Transform:
   m_ObjectHideFlags: 0
@@ -3428,6 +3429,11 @@ PrefabInstance:
       objectReference: {fileID: 232023168}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+--- !u!1 &1748640805558956996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1748640805870423205, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+  m_PrefabInstance: {fileID: 1748640805558956995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4158962130556865149
 PrefabInstance:
   m_ObjectHideFlags: 0
