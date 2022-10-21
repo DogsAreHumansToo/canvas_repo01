@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     public int enemiesInRoom;
     public bool spawnerDone;
     public GameObject spawnerDoneGameObject;
+    public int maxEnemies;
 
     private void Start()
     {

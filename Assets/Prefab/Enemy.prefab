@@ -173,3 +173,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  gameSystem: {fileID: 3579923595761745233, guid: 6bd28db1284d89d49873047c0bf78ce9, type: 3}
