@@ -9,6 +9,7 @@ public class GameSystem : MonoBehaviour
 
     public bool waveLevel = false;
     public int enemiesKilled = 0;
+    public GameObject completeLevelUI;
 
     private void Update()
     {
@@ -18,6 +19,7 @@ public class GameSystem : MonoBehaviour
             {
                 Debug.Log("WIN!!!!!!!!!!!!!!!");
                 enemiesKilled = 0;
+                completeLevelUI.SetActive(true);
             }
         }
     }
