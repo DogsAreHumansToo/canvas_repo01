@@ -26,5 +26,5 @@ public class EnemyBehaviourScript : MonoBehaviour
         {
             collision.GetComponent<HealthScript>().TakeDamage(damage);
         }
-    }//pog
+    }//pogpog
 }
