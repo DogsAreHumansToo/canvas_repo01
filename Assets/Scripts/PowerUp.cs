@@ -6,7 +6,7 @@ public class PowerUp : MonoBehaviour
 {
     public float multiplier = 2;
     public float duration = 4;
-    public AudioSource pickUpSND;
+    public AudioSource pickUpSND;//
 
     //public GameObject pickupEffect;
 
