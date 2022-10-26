@@ -14,7 +14,7 @@ public class AbilityHolder : MonoBehaviour
         active,
         cooldown
     }
-    AbilityHolder state = AbiliyState.ready
+    AbilityState state = AbilityState.ready;
     public KeyCode key;
 
     void Update()
@@ -24,23 +24,32 @@ public class AbilityHolder : MonoBehaviour
             case AbilityState.ready:
                 if (Input.GetKeyDown(key))
                 {
-                    ability.Activate();
+                    ability.Activate(gameObject);
                     state = AbilityState.active;
-                    ativateTime = ability.activateTime;
+                    activeTime = ability.activeTime;
                 }
                 break;
-            case AbilityState.activate:
+            case AbilityState.active:
                 if(activeTime > 0)
                 {
-                    activeTime -= activeTime.deltaTime;
+                    activeTime -= Time.deltaTime;
                 }
                 else
                 {
+                    ability.BeginCooldown(gameObject);
                     state = AbilityState.cooldown;
                     cooldownTime = ability.cooldownTime;
                 }
                 break;
             case AbilityState.cooldown:
+                if (cooldownTime > 0)
+                {
+                    cooldownTime -= Time.deltaTime;
+                }
+                else
+                {
+                    state = AbilityState.ready;
+                }
                 break;
         }
         

@@ -29,11 +29,7 @@ public class PlayerCombat : MonoBehaviour
     int enemyKilledCount;
     EnemyHitBox enemyTest;
 
-    private void Awake()
-    {
-        playerSkills = new PlayerSkills();
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
