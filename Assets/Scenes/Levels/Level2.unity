@@ -668,7 +668,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239063299}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 20, y: -2, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: Level 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1501,7 +1501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909774325}
-  - component: {fileID: 909774324}
+  - component: {fileID: 909774326}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1509,31 +1509,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &909774324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2312997598311319746, guid: 1080b797df0ee324597837b09381ac32, type: 3}
-  m_PrefabInstance: {fileID: 4158962130556865149}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909774323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ab20950b75fba43bf4878b1955bf65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 239063299}
-  - {fileID: 2038093639}
-  enemies:
-  - {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
-  minTimeBtwSpawns: 1
-  maxTimeBtwSpawns: 3
-  canSpawn: 1
-  spawnTime: 15
-  enemiesInRoom: 0
-  spawnerDone: 0
-  spawnerDoneGameObject: {fileID: 1201341489}
-  maxEnemies: 0
 --- !u!4 &909774325
 Transform:
   m_ObjectHideFlags: 0
@@ -1549,6 +1524,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909774326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909774323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa34e2eb7c959244bb95a64131d3d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 239063299}
+  - {fileID: 2038093639}
+  enemies:
+  - {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
+  minTimeBtwSpawns: 1
+  maxTimeBtwSpawns: 2
+  canSpawn: 1
+  maxEnemies: 2
+  enemiesInRoom: 0
+  spawnerDone: 0
+  spawnerDoneGameObject: {fileID: 1201341489}
 --- !u!1 &954246913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,7 +2871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c615a39292843488df7573c013a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 7
+  maxEnemies: 2
   waveLevel: 1
   enemiesKilled: 0
   completeLevelUI: {fileID: 552643665}
@@ -3517,5 +3516,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1080b797df0ee324597837b09381ac32, type: 3}
