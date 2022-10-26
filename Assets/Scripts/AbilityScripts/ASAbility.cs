@@ -6,12 +6,11 @@ using UnityEngine;
 public class ASAbility : Ability
 {
     public float multiplier = 2;
-    public AudioSource asSound;
+    
     public override void Activate(GameObject parent)
     {
         PlayerCombat stats = parent.GetComponent<PlayerCombat>();
         stats.attackRate *= multiplier;
-        asSound.Play();
     }
     public override void BeginCooldown(GameObject parent)
     {
