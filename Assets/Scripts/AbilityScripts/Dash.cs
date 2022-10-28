@@ -6,6 +6,7 @@ using UnityEngine;
 public class Dash : Ability
 {
     public float dashVelocity;
+    [SerializeField] bool canUseAbility = false;
 
     public override void Activate(GameObject parent)
     {

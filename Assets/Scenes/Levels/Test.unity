@@ -1417,11 +1417,11 @@ MonoBehaviour:
   - {fileID: 239063299}
   - {fileID: 2038093639}
   enemies:
-  - {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
+  - {fileID: 8363825354520110549, guid: a36dbfc698e55d24d8675991908bf840, type: 3}
   minTimeBtwSpawns: 1
-  maxTimeBtwSpawns: 3
+  maxTimeBtwSpawns: 1
   canSpawn: 1
-  maxEnemies: 2
+  maxEnemies: 1
   enemiesInRoom: 0
   spawnerDone: 0
   spawnerDoneGameObject: {fileID: 1201341489}
@@ -2328,13 +2328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c615a39292843488df7573c013a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 2
+  maxEnemies: 7
   waveLevel: 1
   enemiesKilled: 0
   completeLevelUI: {fileID: 552643665}
   player: {fileID: 1748640805558956996}
-  boss: {fileID: 8363825354520110549, guid: a36dbfc698e55d24d8675991908bf840, type: 3}
-  currentPoint: {fileID: 239063299}
 --- !u!4 &1922929940
 Transform:
   m_ObjectHideFlags: 0
