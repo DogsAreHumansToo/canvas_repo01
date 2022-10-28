@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f76d4266b3ee1c4aaaaf91cb0c4e2e8, type: 3}
   m_Name: New AS Ability
   m_EditorClassIdentifier: 
-  name: New AS Ability
   cooldownTime: 10
   activeTime: 2
   multiplier: 2
-  asSound: {fileID: 0}
