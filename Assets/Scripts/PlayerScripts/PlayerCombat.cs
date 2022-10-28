@@ -29,6 +29,7 @@ public class PlayerCombat : MonoBehaviour
     int enemyKilledCount;
     EnemyHitBox enemyTest;
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -49,10 +50,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-    void win()
-    {
-        
-    }
+    
     void Attack()
     {
         //Play attack animation
@@ -80,4 +78,5 @@ public class PlayerCombat : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+ 
 }
