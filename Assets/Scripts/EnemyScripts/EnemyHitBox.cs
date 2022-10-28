@@ -40,7 +40,7 @@ public class EnemyHitBox : MonoBehaviour
         }
         Debug.Log("Enemy died!");
 
-        gameSystem.enemiesKilled++;
+        
         Debug.Log(gameSystem.enemiesKilled);
 
         enemySpawner = FindObjectOfType<EnemySpawner>();
@@ -55,7 +55,8 @@ public class EnemyHitBox : MonoBehaviour
         //Die Animation
 
         //Disable the enemy
-        
+
+        gameSystem.enemiesKilled++;
         Destroy(gameObject);
     }
 

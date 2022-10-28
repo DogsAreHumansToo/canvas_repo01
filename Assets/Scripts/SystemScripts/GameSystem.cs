@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-
+    public int maxEnemies;
     public bool waveLevel = false;
     public int enemiesKilled = 0;
     public GameObject completeLevelUI;
@@ -16,7 +16,7 @@ public class GameSystem : MonoBehaviour
     {
         if (waveLevel)
         {
-            if (enemiesKilled >= 7)
+            if (enemiesKilled >= maxEnemies)
             {
                 Debug.Log("WIN!!!!!!!!!!!!!!!");
                 enemiesKilled = 0;
