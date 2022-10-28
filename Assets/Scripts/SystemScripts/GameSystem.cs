@@ -11,18 +11,45 @@ public class GameSystem : MonoBehaviour
     public int enemiesKilled = 0;
     public GameObject completeLevelUI;
     public GameObject player;
+    public GameObject boss;
+    public GameObject currentPoint;
+
+    bool enemySpawn = false;
+
+    private EnemySpawnerFixed enemySpawner;
 
     private void Update()
     {
         if (waveLevel)
         {
-            if (enemiesKilled >= maxEnemies)
+            if (enemiesKilled == maxEnemies)
+            {
+                if (enemySpawn == false)
+                {
+                    SpawnBoss();
+                  
+                    
+                }
+
+            }
+            if (enemiesKilled > maxEnemies)
             {
                 Debug.Log("WIN!!!!!!!!!!!!!!!");
                 enemiesKilled = 0;
                 player.SetActive(false);
                 completeLevelUI.SetActive(true);
             }
+
         }
+
+    }
+
+  
+    public void SpawnBoss()
+    {
+        Instantiate(boss, transform.position, Quaternion.identity);
+        Debug.Log("boss spawned");
+        enemySpawn = true;
+
     }
 }

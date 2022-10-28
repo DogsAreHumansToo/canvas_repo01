@@ -64,6 +64,7 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
+            //enemy.GetComponent<BossHitBox>().TakeDamage(attackDamage);
             enemyHitSound.Play();
         }
     }

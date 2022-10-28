@@ -6,7 +6,8 @@ using UnityEngine;
 public class ASAbility : Ability
 {
     public float multiplier = 2;
-    bool canUseAbility = false;
+    [SerializeField] bool canUseAbility = false;
+
     public override void Activate(GameObject parent)
     {
         PlayerCombat stats = parent.GetComponent<PlayerCombat>();

@@ -7,6 +7,7 @@ public class AbilityHolder : MonoBehaviour
     public Ability ability;
     float cooldownTime;
     float activeTime;
+    bool unlocked = false;
 
     enum AbilityState
     {
@@ -22,6 +23,7 @@ public class AbilityHolder : MonoBehaviour
     {
         switch(state)
         {
+  
             case AbilityState.ready:
                 if (Input.GetKeyDown(key))
                 {
