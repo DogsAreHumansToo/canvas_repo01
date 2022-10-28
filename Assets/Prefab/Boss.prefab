@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1748640805870423205, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
   speed: 5
-  damage: 2
+  damage: 1
 --- !u!114 &-3834578918954060835
 MonoBehaviour:
   m_ObjectHideFlags: 0
