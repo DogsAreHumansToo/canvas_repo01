@@ -1158,6 +1158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 574902018}
+  - component: {fileID: 574902019}
   m_Layer: 5
   m_Name: GameOverMenu
   m_TagString: Untagged
@@ -1188,6 +1189,19 @@ RectTransform:
   m_AnchoredPosition: {x: 83.100006, y: 143.69992}
   m_SizeDelta: {x: 748.7565, y: 494.55988}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &574902019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574902017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08cf0980c68ece40a29408ceb5d2c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverMenu: {fileID: 0}
 --- !u!1 &683562872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,15 +1628,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa34e2eb7c959244bb95a64131d3d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 239063299}
-  - {fileID: 2038093639}
+  spawnPoints: []
   enemies:
   - {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
   minTimeBtwSpawns: 1
-  maxTimeBtwSpawns: 2
+  maxTimeBtwSpawns: 3
   canSpawn: 1
-  maxEnemies: 2
+  maxEnemies: 5
   enemiesInRoom: 0
   spawnerDone: 0
   spawnerDoneGameObject: {fileID: 1201341489}

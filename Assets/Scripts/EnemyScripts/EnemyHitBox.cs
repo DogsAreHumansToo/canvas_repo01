@@ -10,7 +10,7 @@ public class EnemyHitBox : MonoBehaviour
     public GameSystem gameSystem;
 
     PlayerCombat killCount;
-    private EnemySpawner enemySpawner;
+    private EnemySpawnerFixed enemySpawner;
 
     // Start is called before the first frame update
     void Start()
@@ -43,14 +43,14 @@ public class EnemyHitBox : MonoBehaviour
         
         Debug.Log(gameSystem.enemiesKilled);
 
-        enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemySpawner = FindObjectOfType<EnemySpawnerFixed>();
         enemySpawner.enemiesInRoom--;
         
         
-        if (enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
-        {
-            enemySpawner.spawnerDone = true;
-        }
+        //if (EnemySpawnerFixed.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        //{
+        //    enemySpawner.spawnerDone = true;
+        //}
 
         //Die Animation
 
