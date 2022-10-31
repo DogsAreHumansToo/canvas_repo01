@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 941809217389857862}
   - component: {fileID: 5552819531489248478}
   - component: {fileID: -4945469088720768110}
-  - component: {fileID: 8667941428449294255}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -149,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1748640805870423205, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
   speed: 3
-  damage: 1
+  damage: 0.5
   playerMovement: {fileID: 1748640805870423208, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
 --- !u!61 &5552819531489248478
 BoxCollider2D:
@@ -198,17 +197,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8667941428449294255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4292251446885821954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe260c8d5f49b4d44a21f44f6f115948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 5
-  knockTime: 0.4
