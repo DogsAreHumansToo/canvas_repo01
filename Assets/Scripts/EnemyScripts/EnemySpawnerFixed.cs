@@ -13,6 +13,7 @@ public class EnemySpawnerFixed : MonoBehaviour
     public float maxTimeBtwSpawns;
     public bool canSpawn;
     public int maxEnemies;
+    public int maxEnemiesInRoom;
     public int enemiesInRoom;
     public bool spawnerDone;
     public GameObject spawnerDoneGameObject;
@@ -30,10 +31,19 @@ public class EnemySpawnerFixed : MonoBehaviour
     {
         if (canSpawn)
         {
-            if (enemiesSpawned >= maxEnemies)
+            if (enemiesInRoom >= maxEnemiesInRoom)
             {
                 canSpawn = false;
             }
+            else if (enemiesSpawned >= maxEnemies)
+            {
+                canSpawn = false;
+            }
+           
+        }
+        if(enemiesInRoom < maxEnemiesInRoom && enemiesSpawned < maxEnemies)
+        {
+            canSpawn = true;
         }
     }
 
