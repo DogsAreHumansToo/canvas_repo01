@@ -12,6 +12,8 @@ public class EnemyHitBox : MonoBehaviour
     PlayerCombat killCount;
     private EnemySpawnerFixed enemySpawner;
 
+    public SpriteRenderer yuh;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +59,17 @@ public class EnemyHitBox : MonoBehaviour
         //Disable the enemy
 
         gameSystem.enemiesKilled++;
+       
+
+        Destroy(gameObject.GetComponent<BoxCollider2D>());
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+       
+        StartCoroutine(destroyObject());
+        
+    }
+    private IEnumerator destroyObject()
+    {
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }
 
