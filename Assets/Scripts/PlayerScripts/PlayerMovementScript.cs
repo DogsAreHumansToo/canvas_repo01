@@ -15,6 +15,8 @@ public class PlayerMovementScript : MonoBehaviour
 
     public bool KnockFromRight;
 
+    
+
     private void OnEnable()
     {
         HealthScript.onPlayerDeath += DisablePlayerMovement;

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748640805494847600}
+  - component: {fileID: 4457388158172951094}
   m_Layer: 0
   m_Name: attackPoint
   m_TagString: Untagged
@@ -24,13 +25,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748640805494847601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0281646, y: -0.6297543, z: 0}
-  m_LocalScale: {x: 1.4195875, y: 1.3288763, z: 1}
+  m_LocalPosition: {x: 2.0281646, y: 0.06, z: 0}
+  m_LocalScale: {x: 2.2125, y: 3.9387426, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9051868933284618141}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4457388158172951094
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748640805494847601}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1748640805870423205
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  KBForce: 7
+  KBForce: 11
   KBCounter: 0
   KBTotalTime: 0.2
   KnockFromRight: 0
@@ -168,9 +185,11 @@ MonoBehaviour:
     m_Bits: 64
   attacksprite: {fileID: 21300000, guid: efbe22ff9ba23fc4d886906fbbcb3b7f, type: 3}
   idleState: {fileID: 21300000, guid: 8ef634ce4f168b6469848d194b2eabaf, type: 3}
-  attackRange: 1
+  attackRange: 1.5
   attackDamage: 50
   attackRate: 4
+  thrust: 10
+  knockTime: 0.2
 --- !u!114 &-6665936045746915742
 MonoBehaviour:
   m_ObjectHideFlags: 0
