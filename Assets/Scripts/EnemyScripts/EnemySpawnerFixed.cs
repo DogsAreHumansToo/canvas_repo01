@@ -15,6 +15,8 @@ public class EnemySpawnerFixed : MonoBehaviour
     public int maxEnemies;
     public int maxEnemiesInRoom;
     public int enemiesInRoom;
+    public bool toggleTimer;
+    public float targetTime;
     public bool spawnerDone;
     public GameObject spawnerDoneGameObject;
 
@@ -25,10 +27,23 @@ public class EnemySpawnerFixed : MonoBehaviour
     {
         Invoke("SpawnEnemy", 0.5f);
         enemiesSpawned = 0;
+        if(toggleTimer)
+        {
+            maxEnemies = 10000;
+        }
     }
 
     private void Update()
     {
+        if(toggleTimer)
+        {
+            if (targetTime > 0)
+            {
+                targetTime -= Time.deltaTime;
+            }
+            
+        }
+
         if (canSpawn)
         {
             if (enemiesInRoom >= maxEnemiesInRoom)

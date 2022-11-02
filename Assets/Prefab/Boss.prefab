@@ -76,6 +76,7 @@ MonoBehaviour:
   player: {fileID: 1748640805870423205, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
   speed: 5
   damage: 1
+  playerMovement: {fileID: 0}
 --- !u!114 &-3834578918954060835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,8 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f10c1ae374e6a43b01efbbd5c57e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 10
   gameSystem: {fileID: 0}
+  isBoss: 1
 --- !u!1 &8390993010502039967
 GameObject:
   m_ObjectHideFlags: 0
