@@ -9,6 +9,8 @@ public class EnemyBehaviourScript : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float damage;
 
+    public PlayerMovementScript playerMovement;
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -22,8 +24,18 @@ public class EnemyBehaviourScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        playerMovement = player.GetComponent<PlayerMovementScript>();
+        if (collision.gameObject.tag == "Player")
         {
+            playerMovement.KBCounter = playerMovement.KBTotalTime;
+            if (collision.transform.position.x < transform.position.x)
+            {
+                playerMovement.KnockFromRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                playerMovement.KnockFromRight = false;
+            }
             collision.GetComponent<HealthScript>().TakeDamage(damage);
         }
     }//pogpog

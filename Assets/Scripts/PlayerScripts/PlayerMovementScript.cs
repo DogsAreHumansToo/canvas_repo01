@@ -9,6 +9,12 @@ public class PlayerMovementScript : MonoBehaviour
     private Rigidbody2D body;
     private float horizontalInput;
 
+    public float KBForce;
+    public float KBCounter;
+    public float KBTotalTime;
+
+    public bool KnockFromRight;
+
     private void OnEnable()
     {
         HealthScript.onPlayerDeath += DisablePlayerMovement;
@@ -31,9 +37,23 @@ public class PlayerMovementScript : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-
-        // movement input
-        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        if(KBCounter <= 0)
+        {
+            // movement input
+            body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        }
+        else
+        {
+            if(KnockFromRight==true)
+            {
+                body.velocity = new Vector2(-KBForce,0);
+            }
+            else
+            {
+                body.velocity = new Vector2(KBForce, 0);
+            }
+            KBCounter -= Time.deltaTime;
+        }
 
         if(body.bodyType != RigidbodyType2D.Static)
         {
@@ -58,5 +78,9 @@ public class PlayerMovementScript : MonoBehaviour
     private void EnablePlayerMovement()
     {
         body.bodyType = RigidbodyType2D.Dynamic;
+    }
+    public void Knock()
+    {
+
     }
 }
