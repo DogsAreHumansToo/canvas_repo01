@@ -2700,7 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c615a39292843488df7573c013a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 8
+  maxEnemies: 5
   waveLevel: 1
   timeLevel: 0
   enemiesKilled: 0
