@@ -29,7 +29,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField]
     private float thrust, knockTime;
 
-   
+    
+
+    private void Start()
+    {
+       
+    }
 
     // Update is called once per frame
     void Update()
@@ -81,6 +86,7 @@ public class PlayerCombat : MonoBehaviour
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
             //enemy.GetComponent<BossHitBox>().TakeDamage(attackDamage);
             enemyHitSound.Play();
+           
         }
     }
 

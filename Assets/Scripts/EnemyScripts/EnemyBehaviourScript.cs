@@ -10,11 +10,14 @@ public class EnemyBehaviourScript : MonoBehaviour
     [SerializeField] private float damage;
     public PlayerMovementScript playerMovement;
 
+    private ScreenShakeController cameraShake;
+
     [SerializeField] private PlayerCombat playerCounter;
     public float dazedTime1;
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+        cameraShake = FindObjectOfType<ScreenShakeController>();
     }
     private void Update()
     {
@@ -29,6 +32,8 @@ public class EnemyBehaviourScript : MonoBehaviour
         playerMovement = player.GetComponent<PlayerMovementScript>();
         if (collision.gameObject.tag == "Player")
         {
+            
+
             playerMovement.KBCounter = playerMovement.KBTotalTime;
             if (collision.transform.position.x < transform.position.x)
             {
@@ -39,6 +44,8 @@ public class EnemyBehaviourScript : MonoBehaviour
                 playerMovement.KnockFromRight = false;
             }
             collision.GetComponent<HealthScript>().TakeDamage(damage);
+
+            StartCoroutine(cameraShake.Shake(.04f, .04f));
         }
     }//pogpog
 }
