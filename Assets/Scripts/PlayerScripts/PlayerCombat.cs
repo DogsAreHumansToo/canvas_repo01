@@ -29,7 +29,11 @@ public class PlayerCombat : MonoBehaviour
     int enemyKilledCount;
     EnemyHitBox enemyTest;
 
-    
+    [SerializeField]
+    private float thrust, knockTime;
+
+   
+
     // Update is called once per frame
     void Update()
     {
@@ -61,8 +65,22 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         //Damage enemies
+        
         foreach (Collider2D enemy in hitEnemies)
         {
+            
+            
+            if (enemy.gameObject.CompareTag("Enemy"))
+            {
+                Rigidbody2D enemy1 = enemy.GetComponent<Rigidbody2D>();
+                if (enemy1 != null)
+                {
+                    
+                    StartCoroutine(KnockCo(enemy1));
+                }
+                
+                
+            }
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
             //enemy.GetComponent<BossHitBox>().TakeDamage(attackDamage);
             enemyHitSound.Play();
@@ -79,5 +97,31 @@ public class PlayerCombat : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
- 
+
+   
+
+
+    //knock
+  
+    private IEnumerator KnockCo(Rigidbody2D enemy1)
+    {
+
+
+        if (enemy1 != null)
+        {
+            
+            Vector2 differenceDirection = enemy1.transform.position - transform.position;
+            Vector2 difference = differenceDirection.normalized * thrust;
+            difference.y = 0;
+            enemy1.velocity = difference;
+            // enemy1.AddForce(difference, ForceMode2D.Impulse);
+            yield return new WaitForSeconds(knockTime);
+            enemy1.velocity = new Vector2();
+            
+
+        }
+
+    }
 }
+ 
+
