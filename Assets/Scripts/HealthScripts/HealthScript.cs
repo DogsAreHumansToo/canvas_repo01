@@ -25,6 +25,7 @@ public class HealthScript : MonoBehaviour
             //currentHealth = 0;
             
             onPlayerDeath?.Invoke();
+            
         }
         
     }

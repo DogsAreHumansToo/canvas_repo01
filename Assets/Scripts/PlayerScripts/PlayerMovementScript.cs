@@ -81,8 +81,5 @@ public class PlayerMovementScript : MonoBehaviour
     {
         body.bodyType = RigidbodyType2D.Dynamic;
     }
-    public void Knock()
-    {
-
-    }
+  
 }

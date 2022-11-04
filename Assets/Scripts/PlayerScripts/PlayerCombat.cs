@@ -29,13 +29,15 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField]
     private float thrust, knockTime;
 
-    
 
-    private void Start()
+    private void OnEnable()
     {
-       
+        HealthScript.onPlayerDeath += DisableAttack;
     }
-
+    private void OnDisable()
+    {
+        HealthScript.onPlayerDeath -= DisableAttack;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -56,7 +58,20 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-    
+    private void Start()
+    {
+        EnableAttack();
+    }
+    private void DisableAttack()
+    {
+        nextAttackTime = 50f;
+    }
+
+    private void EnableAttack()
+    {
+        nextAttackTime = 0f;
+    }
+
     void Attack()
     {
         //Play attack animation
