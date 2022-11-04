@@ -45,7 +45,7 @@ public class EnemyBehaviourScript : MonoBehaviour
             }
             collision.GetComponent<HealthScript>().TakeDamage(damage);
 
-            StartCoroutine(cameraShake.Shake(.04f, .04f));
+            StartCoroutine(cameraShake.Shake(.04f, .08f));
         }
     }//pogpog
 }

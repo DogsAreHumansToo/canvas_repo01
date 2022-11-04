@@ -12,12 +12,12 @@ public class ScreenShakeController : MonoBehaviour
         float elapsed = 0.0f;
         while(elapsed < duration)
         {
-            float x = Random.Range(-1f, .1f) * magnitude;
+            float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            transform.localPosition = new Vector3(x + originalPosition.x, y + originalPosition.y, originalPosition.z);
-
             elapsed += Time.deltaTime;
+
+            transform.localPosition = new Vector3(x + originalPosition.x, y + originalPosition.y, originalPosition.z);
 
             yield return null;
         }
@@ -26,8 +26,9 @@ public class ScreenShakeController : MonoBehaviour
     }
 
 }
-
-
+//private ScreenShakeController cameraShake;
+// cameraShake = FindObjectOfType<ScreenShakeController>();
+//StartCoroutine(cameraShake.Shake(.04f, .04f));
 
 
 

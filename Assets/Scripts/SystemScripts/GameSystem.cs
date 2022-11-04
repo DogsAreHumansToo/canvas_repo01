@@ -19,9 +19,12 @@ public class GameSystem : MonoBehaviour
 
     public EnemySpawnerFixed enemySpawner;
 
+    public ScreenShakeController cameraShake;
+    
+
     private void start()
     {
-
+        
     }
 
     private void Update()
@@ -32,7 +35,8 @@ public class GameSystem : MonoBehaviour
             {
                 if (hasBossSpawned == false)
                 {
-                    SpawnBoss(); 
+                    SpawnBoss();
+                    StartCoroutine(cameraShake.Shake(1f, 0.8f));
                 }
 
             }
@@ -52,6 +56,7 @@ public class GameSystem : MonoBehaviour
                 if (hasBossSpawned == false)
                 {
                     SpawnBoss();
+                    StartCoroutine(cameraShake.Shake(1f, 0.8f));
                     enemiesKilled = 0;
                     maxEnemies = 1;
                     enemySpawner.toggleTimer = false;
@@ -73,6 +78,7 @@ public class GameSystem : MonoBehaviour
     {
         hasBossSpawned = true;
         Instantiate(boss, transform.position, Quaternion.identity);
+        
         Debug.Log("boss spawned");
     }
 
