@@ -20,11 +20,9 @@ public class GameSystem : MonoBehaviour
     public EnemySpawnerFixed enemySpawner;
 
     public ScreenShakeController cameraShake;
-    
 
     private void start()
     {
-        
     }
 
     private void Update()

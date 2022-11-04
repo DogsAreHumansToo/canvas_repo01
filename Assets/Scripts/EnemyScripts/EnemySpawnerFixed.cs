@@ -41,7 +41,6 @@ public class EnemySpawnerFixed : MonoBehaviour
             {
                 targetTime -= Time.deltaTime;
             }
-            
         }
 
         if (canSpawn)
@@ -53,6 +52,7 @@ public class EnemySpawnerFixed : MonoBehaviour
             else if (enemiesSpawned >= maxEnemies)
             {
                 canSpawn = false;
+                
             }
            
         }
