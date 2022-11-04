@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5857927032252956413}
   - component: {fileID: 5284084692122918767}
   - component: {fileID: -3834578918954060835}
+  - component: {fileID: 5527732921491753069}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +77,9 @@ MonoBehaviour:
   player: {fileID: 1748640805870423205, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
   speed: 5
   damage: 1
+  playerMovement: {fileID: 1748640805870423208, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+  playerCounter: {fileID: 1748640805870423214, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+  dazedTime1: 0.1
 --- !u!114 &-3834578918954060835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +94,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 300
   gameSystem: {fileID: 0}
+  yuh: {fileID: 0}
+--- !u!50 &5527732921491753069
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363825354520110549}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8390993010502039967
 GameObject:
   m_ObjectHideFlags: 0

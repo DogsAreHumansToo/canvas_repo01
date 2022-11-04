@@ -26,9 +26,6 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 4f;
     float nextAttackTime = 0f;
 
-    int enemyKilledCount;
-    EnemyHitBox enemyTest;
-
     [SerializeField]
     private float thrust, knockTime;
 
