@@ -1294,8 +1294,8 @@ MonoBehaviour:
   minTimeBtwSpawns: 3
   maxTimeBtwSpawns: 5
   canSpawn: 1
-  maxEnemies: 5
-  maxEnemiesInRoom: 2
+  maxEnemies: 8
+  maxEnemiesInRoom: 4
   enemiesInRoom: 0
   spawnerDone: 0
   spawnerDoneGameObject: {fileID: 1201341489}
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c615a39292843488df7573c013a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 5
+  maxEnemies: 8
   waveLevel: 1
   enemiesKilled: 0
   completeLevelUI: {fileID: 552643665}
