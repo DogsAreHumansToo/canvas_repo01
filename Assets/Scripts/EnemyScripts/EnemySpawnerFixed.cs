@@ -42,19 +42,16 @@ public class EnemySpawnerFixed : MonoBehaviour
                 targetTime -= Time.deltaTime;
             }
         }
-
         if (canSpawn)
         {
             if (enemiesInRoom >= maxEnemiesInRoom)
             {
                 canSpawn = false;
             }
-            else if (enemiesSpawned >= maxEnemies)
+            else if (enemiesSpawned >= maxEnemies && enemiesInRoom != 0)
             {
                 canSpawn = false;
-                
             }
-           
         }
         if(enemiesInRoom < maxEnemiesInRoom && enemiesSpawned < maxEnemies)
         {
