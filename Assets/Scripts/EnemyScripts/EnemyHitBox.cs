@@ -15,10 +15,13 @@ public class EnemyHitBox : MonoBehaviour
 
     public SpriteRenderer yuh;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -43,7 +46,7 @@ public class EnemyHitBox : MonoBehaviour
     {
         currentHealth -= damage;
 
-        //play HURT animation
+        animator.SetTrigger("Hurt");
 
         if (currentHealth <= 0)
         {

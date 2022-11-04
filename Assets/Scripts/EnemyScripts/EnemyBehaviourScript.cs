@@ -24,6 +24,7 @@ public class EnemyBehaviourScript : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, speed * Time.deltaTime);
     }
 
+    //knock player when hit by enemy
     private void OnTriggerEnter2D(Collider2D collision)
     {
         playerMovement = player.GetComponent<PlayerMovementScript>();

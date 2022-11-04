@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5857927032252956413}
   - component: {fileID: 5284084692122918767}
   - component: {fileID: -3834578918954060835}
-  - component: {fileID: 5527732921491753069}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Enemy
@@ -78,6 +77,8 @@ MonoBehaviour:
   speed: 5
   damage: 1
   playerMovement: {fileID: 0}
+  playerCounter: {fileID: 0}
+  dazedTime1: 0
 --- !u!114 &-3834578918954060835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +94,7 @@ MonoBehaviour:
   maxHealth: 10
   gameSystem: {fileID: 0}
   isBoss: 1
+  yuh: {fileID: 0}
 --- !u!1 &8390993010502039967
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4566674916136255087}
   - component: {fileID: 8516694938718302516}
+  - component: {fileID: 8294545657938263440}
   m_Layer: 0
   m_Name: ShadPunch
   m_TagString: Untagged
@@ -177,3 +180,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8294545657938263440
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390993010502039967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aeeb3e281bd7bbf4cb41be3f5e0ef59e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
