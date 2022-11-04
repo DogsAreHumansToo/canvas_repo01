@@ -23,15 +23,18 @@ public class EnemyHitBox : MonoBehaviour
     {
         enemySpawner = FindObjectOfType<EnemySpawnerFixed>();
         gameSystem = FindObjectOfType<GameSystem>();
-
-        if (enemySpawner.targetTime <= 0 && gameSystem.hasBossSpawned == false)
-       {
-           if (!isBoss)
-           {
-                Debug.Log("room clear");
-                Die();
-           }
-       }
+        if(gameSystem.timeLevel == true)
+        {
+            if (enemySpawner.targetTime <= 0 && gameSystem.hasBossSpawned == false)
+            {
+                if (!isBoss)
+                {
+                    Debug.Log("room clear");
+                    Die();
+                }
+            }
+        }
+        
     }
 
     public void TakeDamage(int damage)
