@@ -8,6 +8,8 @@ public class SpawnPointMove : MonoBehaviour
 
     private Rigidbody2D body;
     private float horizontalInput;
+    public PlayerMovementScript player;
+    public bool left;
 
     private void Awake()
     {
@@ -21,10 +23,17 @@ public class SpawnPointMove : MonoBehaviour
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-
-        // movement input
-        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        Vector2 offset;
+        offset.y = 1;
+        if (left)
+        {
+            offset.x = -12;
+        }
+        else
+        {
+            offset.x = 10;
+        }
+        body.MovePosition(player.body.position + offset);
 
     }
     private void DisableMovement()

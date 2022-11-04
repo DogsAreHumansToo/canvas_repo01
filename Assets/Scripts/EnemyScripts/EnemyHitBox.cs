@@ -8,6 +8,7 @@ public class EnemyHitBox : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     public GameSystem gameSystem;
+    public bool isBoss;
 
     PlayerCombat killCount;
     private EnemySpawnerFixed enemySpawner;
@@ -18,6 +19,23 @@ public class EnemyHitBox : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    private void Update()
+    {
+        enemySpawner = FindObjectOfType<EnemySpawnerFixed>();
+        gameSystem = FindObjectOfType<GameSystem>();
+        if(gameSystem.timeLevel == true)
+        {
+            if (enemySpawner.targetTime <= 0 && gameSystem.hasBossSpawned == false)
+            {
+                if (!isBoss)
+                {
+                    Debug.Log("room clear");
+                    Die();
+                }
+            }
+        }
         
     }
 
@@ -47,7 +65,6 @@ public class EnemyHitBox : MonoBehaviour
 
         enemySpawner = FindObjectOfType<EnemySpawnerFixed>();
         enemySpawner.enemiesInRoom--;
-        
         
         //if (EnemySpawnerFixed.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
         //{

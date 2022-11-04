@@ -9,13 +9,21 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject inGameUI;
     public bool toggleInGameUIOnDeath;
-    public TextMeshProUGUI waveUI;
+    public TextMeshProUGUI goalUI;
     public GameSystem gameSystem;
 
     private void Update()
     {
-        int enemyCounter = gameSystem.maxEnemies - gameSystem.enemiesKilled;
-        waveUI.text = enemyCounter.ToString() + " Enemies Left";
+        if(gameSystem.waveLevel)
+        {
+            int enemyCounter = gameSystem.maxEnemies - gameSystem.enemiesKilled;
+            goalUI.text = enemyCounter.ToString() + " Enemies Left";
+        }
+        else if (gameSystem.timeLevel)
+        {
+            int timer = (int)gameSystem.enemySpawner.targetTime;
+            goalUI.text = timer.ToString() + "s left";
+        }
     }
 
     private void OnEnable()
