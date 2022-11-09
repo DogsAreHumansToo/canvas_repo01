@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
 
-    //public Animator animator;
+    public Animator animator;
 
     public AudioSource enemyHitSound;
     public AudioSource missedAttack;
@@ -47,9 +47,10 @@ public class PlayerCombat : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
-                player.gameObject.GetComponent<SpriteRenderer>().sprite = attacksprite;
+                //player.gameObject.GetComponent<SpriteRenderer>().sprite = attacksprite;
+                animator.Play("ShadPunch");
                 //Debug.Log("attack");
-                missedAttack.Play();
+                //missedAttack.Play();
 
             }
             else

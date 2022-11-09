@@ -1441,6 +1441,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683562872}
   m_CullTransparentMesh: 1
+--- !u!95 &783472620 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 606125528465887725, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+  m_PrefabInstance: {fileID: 1748640805558956995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &812433460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,6 +3782,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1748640805870423208, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 783472620}
+    - target: {fileID: 1748640805870423208, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
       propertyPath: KBTotalTime
       value: 0.2
       objectReference: {fileID: 0}
@@ -3840,6 +3849,10 @@ PrefabInstance:
       propertyPath: enemyHitSound
       value: 
       objectReference: {fileID: 232023168}
+    - target: {fileID: 3702614709302371625, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: m_Name
+      value: Shad
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
 --- !u!1 &1748640805558956996 stripped
