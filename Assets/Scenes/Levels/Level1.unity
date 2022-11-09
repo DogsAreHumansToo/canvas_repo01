@@ -3239,8 +3239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 514916204}
-  totalhealthBar: {fileID: 751629253}
-  currenthealthBar: {fileID: 1354882873}
+  totalhealthBar: {fileID: 1354882873}
+  currenthealthBar: {fileID: 285174738}
 --- !u!114 &1663338360
 MonoBehaviour:
   m_ObjectHideFlags: 0
