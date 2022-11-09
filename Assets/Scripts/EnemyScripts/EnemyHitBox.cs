@@ -11,9 +11,8 @@ public class EnemyHitBox : MonoBehaviour
     public bool isBoss;
 
     PlayerCombat killCount;
-    private EnemySpawnerFixed enemySpawner;
+    private EnemySpawnerFixed enemySpawner; //
 
-    public SpriteRenderer yuh;
 
     private ScreenShakeController cameraShake;
     Animator animator;
