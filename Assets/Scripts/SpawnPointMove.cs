@@ -31,7 +31,7 @@ public class SpawnPointMove : MonoBehaviour
         }
         else
         {
-            offset.x = 10;
+            offset.x = 12;
         }
         body.MovePosition(player.body.position + offset);
 
