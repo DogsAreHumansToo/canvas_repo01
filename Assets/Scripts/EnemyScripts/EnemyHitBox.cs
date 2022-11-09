@@ -7,7 +7,7 @@ public class EnemyHitBox : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
-    public GameObject enemyhitSpark;
+    public GameObject hitSparkEmpty;
     public GameSystem gameSystem;
     public bool isBoss;
 
@@ -24,7 +24,7 @@ public class EnemyHitBox : MonoBehaviour
         currentHealth = maxHealth;
         cameraShake = FindObjectOfType<ScreenShakeController>();
         animator = GetComponent<Animator>();
-        animatorHitSpark = enemyhitSpark.gameObject.GetComponent<Animator>();
+        animatorHitSpark = hitSparkEmpty.gameObject.GetComponent<Animator>();
     }
 
     private void Update()

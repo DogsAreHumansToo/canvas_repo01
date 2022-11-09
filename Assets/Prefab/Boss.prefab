@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
-  enemyhitSpark: {fileID: 5504081336594151363}
+  hitSparkEmpty: {fileID: 5504081336594151363}
   gameSystem: {fileID: 0}
   isBoss: 1
 --- !u!114 &5284084692122918767
