@@ -46,7 +46,7 @@ public class EnemyHitBox : MonoBehaviour
     {
         currentHealth -= damage;
         StartCoroutine(cameraShake.Shake(.04f, .03f));
-        //play HURT animation
+        animator.SetTrigger("Hurt");
 
         if (currentHealth <= 0)
         {
