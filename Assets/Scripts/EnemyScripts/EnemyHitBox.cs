@@ -46,7 +46,7 @@ public class EnemyHitBox : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        StartCoroutine(cameraShake.Shake(.04f, .02f));
+        StartCoroutine(cameraShake.Shake(.04f, .03f));
         //play HURT animation
 
         if (currentHealth <= 0)
