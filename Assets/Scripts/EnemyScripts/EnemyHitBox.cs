@@ -13,7 +13,7 @@ public class EnemyHitBox : MonoBehaviour
     PlayerCombat killCount;
     private EnemySpawnerFixed enemySpawner;
 
-    public SpriteRenderer yuh;
+    //public SpriteRenderer yuh;
 
     private ScreenShakeController cameraShake;
     Animator animator;
@@ -46,8 +46,8 @@ public class EnemyHitBox : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        animator.SetTrigger("Hurt");
-        StartCoroutine(cameraShake.Shake(.04f, .04f));
+        StartCoroutine(cameraShake.Shake(.04f, .02f));
+        //play HURT animation
 
         if (currentHealth <= 0)
         {

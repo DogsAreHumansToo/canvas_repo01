@@ -22,7 +22,7 @@ public class ScreenShakeController : MonoBehaviour
             yield return null;
         }
 
-        //transform.localPosition = x;
+        transform.localPosition = originalPosition;
     }
 
 }
