@@ -1413,7 +1413,7 @@ MonoBehaviour:
   - {fileID: 239063299}
   - {fileID: 2038093639}
   enemies:
-  - {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
+  - {fileID: 4292251446885821954, guid: 100ccfe4e255d5b46ad2ce0e8471de9e, type: 3}
   minTimeBtwSpawns: 3
   maxTimeBtwSpawns: 5
   canSpawn: 1
@@ -1569,6 +1569,10 @@ PrefabInstance:
     - target: {fileID: 3463559847738470711, guid: 8d4306c856ff9d547af6c7ab360c336e, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463559847738470711, guid: 8d4306c856ff9d547af6c7ab360c336e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 3463559847738470711, guid: 8d4306c856ff9d547af6c7ab360c336e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2857,7 +2861,7 @@ MonoBehaviour:
   currentPoint: {fileID: 239063299}
   hasBossSpawned: 0
   enemySpawner: {fileID: 909774326}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 519420034}
 --- !u!4 &1922929940
 Transform:
   m_ObjectHideFlags: 0

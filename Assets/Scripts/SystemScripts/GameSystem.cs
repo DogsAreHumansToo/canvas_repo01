@@ -23,6 +23,7 @@ public class GameSystem : MonoBehaviour
 
     private void start()
     {
+        cameraShake = FindObjectOfType<ScreenShakeController>();
     }
 
     private void Update()
@@ -34,7 +35,7 @@ public class GameSystem : MonoBehaviour
                 if (hasBossSpawned == false)
                 {
                     SpawnBoss();
-                    StartCoroutine(cameraShake.Shake(1f, 0.8f));
+                    StartCoroutine(cameraShake.Shake(1f, 0.6f));
                 }
 
             }
@@ -54,7 +55,7 @@ public class GameSystem : MonoBehaviour
                 if (hasBossSpawned == false)
                 {
                     SpawnBoss();
-                    StartCoroutine(cameraShake.Shake(1f, 0.8f));
+                    StartCoroutine(cameraShake.Shake(1f, 0.6f));
                     enemiesKilled = 0;
                     maxEnemies = 1;
                     enemySpawner.toggleTimer = false;
@@ -75,7 +76,9 @@ public class GameSystem : MonoBehaviour
     public void SpawnBoss()
     {
         hasBossSpawned = true;
-        Instantiate(boss, transform.position, Quaternion.identity);
+        Vector3 spawnPosition = player.transform.position;
+        spawnPosition.x = player.transform.position.x + 18;
+        Instantiate(boss, spawnPosition, Quaternion.identity);
         
         Debug.Log("boss spawned");
     }
