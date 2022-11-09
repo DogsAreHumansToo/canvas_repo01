@@ -44,7 +44,7 @@ public class EnemyHitBox : MonoBehaviour
         }
         
     }
-
+    //Enemy Taking Damage
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

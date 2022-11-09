@@ -21,11 +21,11 @@ public class HealthScript : MonoBehaviour
         currentHealth = startingHealth;
         
     }
-
+    //Player Taking Damage
     public void TakeDamage(float _Damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - _Damage, 0, startingHealth);
         animatorHitSpark.SetTrigger("Hurt");
+        currentHealth = Mathf.Clamp(currentHealth - _Damage, 0, startingHealth);
 
         if (currentHealth <= 0)
         {

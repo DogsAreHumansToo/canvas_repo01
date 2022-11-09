@@ -111,10 +111,8 @@ public class PlayerCombat : MonoBehaviour
             {
                 enemy.gameObject.GetComponent<SpriteRenderer>().sprite = enemyIdleState;
             }
-            
+
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
-            
-            //enemy.GetComponent<BossHitBox>().TakeDamage(attackDamage);
             enemyHitSound.Play();
            
         }
