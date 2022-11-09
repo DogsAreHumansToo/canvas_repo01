@@ -16,13 +16,13 @@ public class EnemyHitBox : MonoBehaviour
     public SpriteRenderer yuh;
 
     private ScreenShakeController cameraShake;
-
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-
         cameraShake = FindObjectOfType<ScreenShakeController>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -46,8 +46,8 @@ public class EnemyHitBox : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        animator.SetTrigger("Hurt");
         StartCoroutine(cameraShake.Shake(.04f, .04f));
-        //play HURT animation
 
         if (currentHealth <= 0)
         {

@@ -11,6 +11,7 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource missedAttack;
 
     public GameObject player;
+    public GameObject enemy;
 
     public Transform attackPoint;
     public LayerMask enemyLayers;
@@ -18,7 +19,11 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField]
     Sprite attacksprite;
     [SerializeField]
+    Sprite hurtsprite;
+    [SerializeField]
     Sprite idleState;
+    [SerializeField]
+    Sprite enemyIdleState;
 
     public float attackRange = 0.5f;
     public int attackDamage = 50;
@@ -94,10 +99,15 @@ public class PlayerCombat : MonoBehaviour
                 {
                     
                     StartCoroutine(KnockCo(enemy1));
+                    enemy.gameObject.GetComponent<SpriteRenderer>().sprite = hurtsprite;
                 }
-                
-                
+
             }
+            else
+            {
+                enemy.gameObject.GetComponent<SpriteRenderer>().sprite = enemyIdleState;
+            }
+            
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
             //enemy.GetComponent<BossHitBox>().TakeDamage(attackDamage);
             enemyHitSound.Play();
@@ -119,8 +129,7 @@ public class PlayerCombat : MonoBehaviour
    
 
 
-    //knock
-  
+    //knock enemy when hit by player
     private IEnumerator KnockCo(Rigidbody2D enemy1)
     {
 
@@ -131,9 +140,11 @@ public class PlayerCombat : MonoBehaviour
             Vector2 differenceDirection = enemy1.transform.position - transform.position;
             Vector2 difference = differenceDirection.normalized * thrust;
             difference.y = 0;
+            
             enemy1.velocity = difference;
             // enemy1.AddForce(difference, ForceMode2D.Impulse);
             yield return new WaitForSeconds(knockTime);
+            
             enemy1.velocity = new Vector2();
             
 

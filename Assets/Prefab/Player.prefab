@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  body: {fileID: 0}
   KBForce: 11
   KBCounter: 0
   KBTotalTime: 0.2
@@ -179,12 +180,15 @@ MonoBehaviour:
   enemyHitSound: {fileID: 0}
   missedAttack: {fileID: 0}
   player: {fileID: 3702614709302371625}
+  enemy: {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
   attackPoint: {fileID: 1748640805494847600}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
   attacksprite: {fileID: 21300000, guid: efbe22ff9ba23fc4d886906fbbcb3b7f, type: 3}
+  hurtsprite: {fileID: 21300000, guid: 47cfc14f131d744438d9471edcba70b7, type: 3}
   idleState: {fileID: 21300000, guid: 8ef634ce4f168b6469848d194b2eabaf, type: 3}
+  enemyIdleState: {fileID: 21300000, guid: 50ebc2c2785373c449dc7b5b5720705e, type: 3}
   attackRange: 1.5
   attackDamage: 50
   attackRate: 4

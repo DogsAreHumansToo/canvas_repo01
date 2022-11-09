@@ -10,8 +10,8 @@ public class EnemyBehaviourScript : MonoBehaviour
     [SerializeField] private float damage;
     public PlayerMovementScript playerMovement;
 
+    bool facingRight = true;
     private ScreenShakeController cameraShake;
-
     [SerializeField] private PlayerCombat playerCounter;
     public float dazedTime1;
     private void Start()
@@ -25,8 +25,27 @@ public class EnemyBehaviourScript : MonoBehaviour
         Vector2 playerPosition = player.transform.position;
         playerPosition.y += 0.9f;
         transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, speed * Time.deltaTime);
+
+        if (player.transform.position.x - this.transform.position.x < 0 && !facingRight)
+        {
+            flip();
+        }
+        else if (player.transform.position.x - this.transform.position.x > 0 && facingRight)
+        {
+            flip();
+        }
     }
 
+    void flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
+    }
+
+    //knock player when hit by enemy
     private void OnTriggerEnter2D(Collider2D collision)
     {
         playerMovement = player.GetComponent<PlayerMovementScript>();
