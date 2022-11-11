@@ -53,10 +53,11 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                animator = player.GetComponent<Animator>() ;
+                animator.Play("ShadPunch");
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
                 
-                //animator.Play("ShadPunch");
                 Debug.Log("attack");
                 missedAttack.Play();
 
@@ -85,7 +86,7 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         //Play attack animation
-        animator.SetTrigger("ShadPunch");
+        //animator.SetTrigger("ShadPunch");
 
 
         //Detect enemies in range of attack
