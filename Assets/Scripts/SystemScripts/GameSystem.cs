@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
+    //
     public int maxEnemies;
     public bool waveLevel = false;
     public bool timeLevel = false;
