@@ -76,7 +76,7 @@ public class EnemySpawnerFixed : MonoBehaviour
         if (spawnerDone)
         {
             spawnerDoneGameObject.SetActive(true);
-        }
+        }//
     }
 
 }
