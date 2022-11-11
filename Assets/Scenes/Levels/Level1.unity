@@ -3838,6 +3838,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1748640805870423214, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 783472620}
+    - target: {fileID: 1748640805870423214, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 941809217389857862, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
