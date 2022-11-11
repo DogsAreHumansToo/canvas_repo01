@@ -39,19 +39,16 @@ public class PlayerMovementScript : MonoBehaviour
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal") * speed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+
         if(KBCounter <= 0)
         {
             // movement input
             body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-            if (body.velocity.x == 0) 
-            {
-                animator.Play("ShadIdle");
-            }
-            else
-            {
-                animator.Play("ShadRun");
-            }
+            
+          
+            
         }
         else
         {
