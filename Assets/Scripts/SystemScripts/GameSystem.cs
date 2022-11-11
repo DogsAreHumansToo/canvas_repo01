@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    //
     public int maxEnemies;
     public bool waveLevel = false;
     public bool timeLevel = false;
@@ -57,17 +56,17 @@ public class GameSystem : MonoBehaviour
                 {
                     SpawnBoss();
                     StartCoroutine(cameraShake.Shake(1f, 0.6f));
+                    enemySpawner.canSpawn = false;
                     enemiesKilled = 0;
                     maxEnemies = 1;
-                    enemySpawner.toggleTimer = false;
                 }
-                //if (enemiesKilled > maxEnemies)
-                //{
-                //    Debug.Log("WIN!!!!!!!!!!!!!!!");
-                //    enemiesKilled = 0;
-                //    player.SetActive(false);
-                //    completeLevelUI.SetActive(true);
-                //}
+                if (enemiesKilled > maxEnemies)
+                {
+                    Debug.Log("WIN!!!!!!!!!!!!!!!");
+                    enemiesKilled = 0;
+                    player.SetActive(false);
+                    completeLevelUI.SetActive(true);
+                }
             }
         }
 
@@ -79,7 +78,7 @@ public class GameSystem : MonoBehaviour
         hasBossSpawned = true;
         Vector3 spawnPosition = player.transform.position;
         spawnPosition.x = player.transform.position.x + 18;
-        Instantiate(boss, spawnPosition, Quaternion.identity);
+        Instantiate(boss, spawnPosition, Quaternion.identity); 
         
         Debug.Log("boss spawned");
     }

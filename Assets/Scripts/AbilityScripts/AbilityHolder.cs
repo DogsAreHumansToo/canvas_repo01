@@ -7,7 +7,7 @@ public class AbilityHolder : MonoBehaviour
     public Ability ability;
     float cooldownTime;
     float activeTime;
-    bool unlocked = false;
+    public bool unlocked = false;
 
     enum AbilityState
     {
@@ -17,45 +17,52 @@ public class AbilityHolder : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
     public KeyCode key;
-   
+
+
+    //private void Start()
+    //{
+    //    unlocked = false;
+    //}
 
     void Update()
     {
-        switch(state)
+        if(unlocked)
         {
-  
-            case AbilityState.ready:
-                if (Input.GetKeyDown(key))
-                {
-                    ability.Activate(gameObject);
-                    state = AbilityState.active;
-                    activeTime = ability.activeTime;
-                }
-                break;
-            case AbilityState.active:
-                if(activeTime > 0)
-                {
-                    activeTime -= Time.deltaTime;
-                }
-                else
-                {
-                    ability.BeginCooldown(gameObject);
-                    state = AbilityState.cooldown;
-                    cooldownTime = ability.cooldownTime;
-                }
-                break;
-            case AbilityState.cooldown:
-                if (cooldownTime > 0)
-                {
-                    cooldownTime -= Time.deltaTime;
-                }
-                else
-                {
-                    state = AbilityState.ready;
-                }
-                break;
+            switch (state)
+            {
+
+                case AbilityState.ready:
+                    if (Input.GetKeyDown(key))
+                    {
+                        ability.Activate(gameObject);
+                        state = AbilityState.active;
+                        activeTime = ability.activeTime;
+                    }
+                    break;
+                case AbilityState.active:
+                    if (activeTime > 0)
+                    {
+                        activeTime -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        ability.BeginCooldown(gameObject);
+                        state = AbilityState.cooldown;
+                        cooldownTime = ability.cooldownTime;
+                    }
+                    break;
+                case AbilityState.cooldown:
+                    if (cooldownTime > 0)
+                    {
+                        cooldownTime -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        state = AbilityState.ready;
+                    }
+                    break;
+            }
         }
-        
     }
 
 }

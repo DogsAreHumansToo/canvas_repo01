@@ -1157,7 +1157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000019077888, y: -60}
+  m_AnchoredPosition: {x: -0.0000019077888, y: -73.116}
   m_SizeDelta: {x: 322.249, y: 92.125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683562874
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2
+  m_text: Survive
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1414,14 +1414,14 @@ MonoBehaviour:
   - {fileID: 2038093639}
   enemies:
   - {fileID: 4292251446885821954, guid: 100ccfe4e255d5b46ad2ce0e8471de9e, type: 3}
-  minTimeBtwSpawns: 3
-  maxTimeBtwSpawns: 5
+  minTimeBtwSpawns: 2
+  maxTimeBtwSpawns: 3
   canSpawn: 1
   maxEnemies: 5
   maxEnemiesInRoom: 3
   enemiesInRoom: 0
   toggleTimer: 1
-  targetTime: 5
+  targetTime: 30
   spawnerDone: 0
   spawnerDoneGameObject: {fileID: 1201341489}
 --- !u!1 &1054539720
@@ -3150,6 +3150,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6915126535767597767, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6665936045746915742, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: unlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1748640805870423204, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -3230,6 +3238,10 @@ PrefabInstance:
       propertyPath: enemyHitSound
       value: 
       objectReference: {fileID: 232023168}
+    - target: {fileID: 1748640805870423215, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: startingHealth
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
 --- !u!1 &1748640805558956996 stripped
@@ -3304,12 +3316,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
+      propertyPath: activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: targetTime
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: maxEnemiesInRoom
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
+      propertyPath: maxTimeBtwSpawns
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
+      propertyPath: minTimeBtwSpawns
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: spawnerDoneGameObject

@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1748640805870423205, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
-  speed: 4
+  speed: 5
   damage: 0.78
   playerMovement: {fileID: 1748640805870423208, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
   playerCounter: {fileID: 1748640805870423214, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}

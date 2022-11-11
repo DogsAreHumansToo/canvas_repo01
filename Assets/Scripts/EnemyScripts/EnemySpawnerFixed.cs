@@ -53,10 +53,7 @@ public class EnemySpawnerFixed : MonoBehaviour
                 canSpawn = false;
             }
         }
-        if(enemiesInRoom < maxEnemiesInRoom && enemiesSpawned < maxEnemies)
-        {
-            canSpawn = true;
-        }
+
     }
 
     void SpawnEnemy()
