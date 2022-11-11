@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
 
         if(toggleInGameUIOnDeath)
         {
-        inGameUI.SetActive(false);
+            inGameUI.SetActive(false);
         }
     }
 

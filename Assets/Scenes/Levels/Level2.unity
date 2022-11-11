@@ -1571,6 +1571,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3463559847738470711, guid: 8d4306c856ff9d547af6c7ab360c336e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463559847738470711, guid: 8d4306c856ff9d547af6c7ab360c336e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2857,7 +2861,7 @@ MonoBehaviour:
   currentPoint: {fileID: 239063299}
   hasBossSpawned: 0
   enemySpawner: {fileID: 909774326}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 519420034}
 --- !u!4 &1922929940
 Transform:
   m_ObjectHideFlags: 0
