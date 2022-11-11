@@ -34,7 +34,6 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         HealthScript.onPlayerDeath += EnableGameOverMenu;
-        
     }
     
     private void OnDisable()
