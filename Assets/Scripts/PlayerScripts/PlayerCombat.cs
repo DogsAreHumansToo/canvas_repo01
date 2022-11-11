@@ -103,7 +103,7 @@ public class PlayerCombat : MonoBehaviour
                 Rigidbody2D enemy1 = enemy.GetComponent<Rigidbody2D>();
                 if (enemy1 != null)
                 {
-                    
+                    enemyHitSound.Play();
                     StartCoroutine(KnockCo(enemy1));
                     enemy.gameObject.GetComponent<SpriteRenderer>().sprite = hurtsprite;
                 }
@@ -115,7 +115,7 @@ public class PlayerCombat : MonoBehaviour
             }
 
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
-            enemyHitSound.Play();
+            
            
         }
     }
