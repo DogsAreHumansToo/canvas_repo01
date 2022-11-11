@@ -7,6 +7,7 @@ public class EnemyHitBox : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
+    public GameObject hitSparkEmpty;
     public GameSystem gameSystem;
     public bool isBoss;
 
@@ -16,12 +17,14 @@ public class EnemyHitBox : MonoBehaviour
 
     private ScreenShakeController cameraShake;
     Animator animator;
+    Animator animatorHitSpark;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         cameraShake = FindObjectOfType<ScreenShakeController>();
         animator = GetComponent<Animator>();
+        animatorHitSpark = hitSparkEmpty.gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -41,12 +44,14 @@ public class EnemyHitBox : MonoBehaviour
         }
         
     }
-
+    //Enemy Taking Damage
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         StartCoroutine(cameraShake.Shake(.04f, .03f));
         animator.SetTrigger("Hurt");
+        animatorHitSpark.SetTrigger("Hurt");
+
 
         if (currentHealth <= 0)
         {

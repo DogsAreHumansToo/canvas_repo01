@@ -11,10 +11,13 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource missedAttack;
 
     public GameObject player;
+    
     public GameObject enemy;
 
     public Transform attackPoint;
     public LayerMask enemyLayers;
+
+    
 
     [SerializeField]
     Sprite attacksprite;
@@ -66,6 +69,7 @@ public class PlayerCombat : MonoBehaviour
     private void Start()
     {
         EnableAttack();
+        
     }
     private void DisableAttack()
     {
@@ -107,9 +111,8 @@ public class PlayerCombat : MonoBehaviour
             {
                 enemy.gameObject.GetComponent<SpriteRenderer>().sprite = enemyIdleState;
             }
-            
+
             enemy.GetComponent<EnemyHitBox>().TakeDamage(attackDamage);
-            //enemy.GetComponent<BossHitBox>().TakeDamage(attackDamage);
             enemyHitSound.Play();
            
         }

@@ -1413,7 +1413,7 @@ MonoBehaviour:
   - {fileID: 239063299}
   - {fileID: 2038093639}
   enemies:
-  - {fileID: 4292251446885821954, guid: 708b27ffcdd3cdb45b689d3cd48d5296, type: 3}
+  - {fileID: 4292251446885821954, guid: 100ccfe4e255d5b46ad2ce0e8471de9e, type: 3}
   minTimeBtwSpawns: 3
   maxTimeBtwSpawns: 5
   canSpawn: 1

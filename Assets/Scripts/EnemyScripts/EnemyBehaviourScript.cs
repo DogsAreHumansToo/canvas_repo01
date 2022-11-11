@@ -62,9 +62,11 @@ public class EnemyBehaviourScript : MonoBehaviour
             {
                 playerMovement.KnockFromRight = false;
             }
-            collision.GetComponent<HealthScript>().TakeDamage(damage);
+            
 
             StartCoroutine(cameraShake.Shake(.04f, .08f));
+            collision.GetComponent<HealthScript>().TakeDamage(damage);
+            
         }
     }//pogpog
 }
