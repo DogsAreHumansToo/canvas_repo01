@@ -15,7 +15,8 @@ public class PlayerMovementScript : MonoBehaviour
 
     public bool KnockFromRight;
 
-    
+    //Sean added sprite animation
+    public Animator animator;
 
     private void OnEnable()
     {
@@ -43,6 +44,14 @@ public class PlayerMovementScript : MonoBehaviour
         {
             // movement input
             body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+            if (body.velocity.x == 0) 
+            {
+                animator.Play("ShadIdle");
+            }
+            else
+            {
+                animator.Play("ShadRun");
+            }
         }
         else
         {
