@@ -24,6 +24,11 @@ public class UIManager : MonoBehaviour
             int timer = (int)gameSystem.enemySpawner.targetTime;
             goalUI.text = timer.ToString() + "s left";
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void OnEnable()
