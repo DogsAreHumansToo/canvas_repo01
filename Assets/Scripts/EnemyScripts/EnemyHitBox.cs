@@ -55,13 +55,13 @@ public class EnemyHitBox : MonoBehaviour
         StartCoroutine(cameraShake.Shake(.04f, .03f));
         animator.SetTrigger("Hurt");
         animatorHitSpark.SetTrigger("Hurt");
-        playerHitSound.Play();
 
         if (currentHealth <= 0)
         {
             Die();
         }
         
+        playerHitSound.Play();
     }
 
     public void Die()
