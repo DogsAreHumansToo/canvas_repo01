@@ -148,11 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  body: {fileID: 0}
+  body: {fileID: 1748640805870423204}
   KBForce: 11
   KBCounter: 0
   KBTotalTime: 0.2
   KnockFromRight: 0
+  animator: {fileID: 606125528465887725}
 --- !u!114 &1748640805870423215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9931858ead624468b01b6491df2be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 606125528465887725}
   enemyHitSound: {fileID: 0}
   missedAttack: {fileID: 0}
   player: {fileID: 3702614709302371625}
