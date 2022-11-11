@@ -1709,7 +1709,7 @@ MonoBehaviour:
   minTimeBtwSpawns: 1
   maxTimeBtwSpawns: 1.5
   canSpawn: 1
-  maxEnemies: 15
+  maxEnemies: 10
   maxEnemiesInRoom: 3
   enemiesInRoom: 0
   toggleTimer: 0
