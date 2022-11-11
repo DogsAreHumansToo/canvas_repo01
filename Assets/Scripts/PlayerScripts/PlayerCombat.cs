@@ -55,16 +55,16 @@ public class PlayerCombat : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
-                //player.gameObject.GetComponent<SpriteRenderer>().sprite = attacksprite;
-                animator.Play("ShadPunch");
-                //Debug.Log("attack");
-                //missedAttack.Play();
+                
+                //animator.Play("ShadPunch");
+                Debug.Log("attack");
+                missedAttack.Play();
 
             }
-            else
-            {
-                player.gameObject.GetComponent<SpriteRenderer>().sprite = idleState;
-            }
+            //else
+            //{
+            //    player.gameObject.GetComponent<SpriteRenderer>().sprite = idleState;
+            //}
         }
     }
     private void Start()
@@ -85,8 +85,8 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         //Play attack animation
-        //animator.SetTrigger("Attack");
-        
+        animator.SetTrigger("ShadPunch");
+
 
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
