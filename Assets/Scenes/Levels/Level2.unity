@@ -700,7 +700,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239063299}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1414,10 +1414,10 @@ MonoBehaviour:
   - {fileID: 2038093639}
   enemies:
   - {fileID: 4292251446885821954, guid: 100ccfe4e255d5b46ad2ce0e8471de9e, type: 3}
-  minTimeBtwSpawns: 2
-  maxTimeBtwSpawns: 3
+  minTimeBtwSpawns: 1
+  maxTimeBtwSpawns: 1.5
   canSpawn: 1
-  maxEnemies: 5
+  maxEnemies: 10000
   maxEnemiesInRoom: 3
   enemiesInRoom: 0
   toggleTimer: 1
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c615a39292843488df7573c013a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 5
+  maxEnemies: 10000
   waveLevel: 0
   timeLevel: 1
   enemiesKilled: 0
@@ -2986,7 +2986,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038093639}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3320,6 +3320,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
+      propertyPath: maxEnemies
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: targetTime
       value: 30
       objectReference: {fileID: 0}
@@ -3329,11 +3333,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: maxTimeBtwSpawns
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: minTimeBtwSpawns
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: spawnerDoneGameObject
