@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 283241231}
   - component: {fileID: 283241230}
   m_Layer: 5
-  m_Name: VolumeText
+  m_Name: ControlsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,6 +187,8 @@ MonoBehaviour:
 
     Dash
     - Shift
+
+    Pause - Escape
 
 '
   m_isRightToLeft: 0
@@ -1197,7 +1199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1209225747
 Transform:
   m_ObjectHideFlags: 0
@@ -1387,7 +1389,7 @@ GameObject:
   - component: {fileID: 1325015264}
   - component: {fileID: 1325015263}
   m_Layer: 5
-  m_Name: Option
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1929657407
 Transform:
   m_ObjectHideFlags: 0
