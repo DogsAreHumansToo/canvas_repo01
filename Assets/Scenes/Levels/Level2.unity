@@ -379,6 +379,7 @@ MonoBehaviour:
   gameOverMenu: {fileID: 574902017}
   inGameUI: {fileID: 1659765918}
   toggleInGameUIOnDeath: 0
+  goalUI: {fileID: 1054539722}
   gameSystem: {fileID: 1922929939}
 --- !u!1 &163760529
 GameObject:
