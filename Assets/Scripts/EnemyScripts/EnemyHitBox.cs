@@ -11,7 +11,7 @@ public class EnemyHitBox : MonoBehaviour
     public GameSystem gameSystem;
     public bool isBoss;
 
-    public AudioSource playerHitSound;
+    
 
     PlayerCombat killCount;
     private EnemySpawnerFixed enemySpawner; //
@@ -27,7 +27,7 @@ public class EnemyHitBox : MonoBehaviour
         cameraShake = FindObjectOfType<ScreenShakeController>();
         animator = GetComponent<Animator>();
         gameSystem = FindObjectOfType<GameSystem>();
-        playerHitSound = FindObjectOfType<AudioSource>();
+        
         animatorHitSpark = hitSparkEmpty.gameObject.GetComponent<Animator>();
     }
 
@@ -55,7 +55,7 @@ public class EnemyHitBox : MonoBehaviour
         StartCoroutine(cameraShake.Shake(.04f, .03f));
         animator.SetTrigger("Hurt");
         animatorHitSpark.SetTrigger("Hurt");
-        playerHitSound.Play();
+        
 
         if (currentHealth <= 0)
         {

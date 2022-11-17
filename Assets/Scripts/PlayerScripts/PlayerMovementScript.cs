@@ -6,6 +6,8 @@ public class PlayerMovementScript : MonoBehaviour
 {
     [SerializeField] public float speed;
 
+    
+
     public Rigidbody2D body;
     private float horizontalInput;
 
