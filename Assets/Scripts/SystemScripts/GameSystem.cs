@@ -54,11 +54,13 @@ public class GameSystem : MonoBehaviour
             {
                 if (hasBossSpawned == false)
                 {
+                    enemySpawner.spawnerON = false;
+                    enemySpawner.canSpawn = false;
                     SpawnBoss();
                     StartCoroutine(cameraShake.Shake(1f, 0.6f));
-                    enemySpawner.canSpawn = false;
                     enemiesKilled = 0;
-                    maxEnemies = 1;
+                    maxEnemies = enemySpawner.enemiesInRoom;
+                    
                 }
                 if (enemiesKilled > maxEnemies)
                 {
