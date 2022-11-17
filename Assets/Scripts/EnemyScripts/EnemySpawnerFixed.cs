@@ -19,6 +19,7 @@ public class EnemySpawnerFixed : MonoBehaviour
     public float targetTime;
     public bool spawnerDone;
     public GameObject spawnerDoneGameObject;
+    public bool spawnerON = true;
 
     private int enemiesSpawned;
     
@@ -42,21 +43,25 @@ public class EnemySpawnerFixed : MonoBehaviour
                 targetTime -= Time.deltaTime;
             }
         }
-        if (canSpawn)
+        if(spawnerON == true)
         {
-            if (enemiesSpawned >= maxEnemies )
+            if (canSpawn)
             {
-                canSpawn = false;
+                if (enemiesSpawned >= maxEnemies)
+                {
+                    canSpawn = false;
+                }
+                else if (enemiesInRoom >= maxEnemiesInRoom)
+                {
+                    canSpawn = false;
+                }
             }
-            else if (enemiesInRoom >= maxEnemiesInRoom)
+            else if (enemiesSpawned != maxEnemies && enemiesInRoom != maxEnemiesInRoom)
             {
-                canSpawn = false;
+                canSpawn = true;
             }
         }
-        else if(enemiesSpawned != maxEnemies && enemiesInRoom != maxEnemiesInRoom)
-        {
-            canSpawn = true;
-        }
+        
     }
 
     void SpawnEnemy()

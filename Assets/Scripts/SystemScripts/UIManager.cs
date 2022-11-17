@@ -2,33 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using TMPro;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject gameOverMenu;
     public GameObject inGameUI;
     public bool toggleInGameUIOnDeath;
-    //public TextMeshProUGUI goalUI;
+    public TextMeshProUGUI goalUI;
     public GameSystem gameSystem;
 
     private void Update()
     {
-        //if(gameSystem.waveLevel)
-        //{
-        //    int enemyCounter = gameSystem.maxEnemies - gameSystem.enemiesKilled;
-        //    goalUI.text = enemyCounter.ToString() + " Enemies Left";
-        //}
-        //else if (gameSystem.timeLevel)
-        //{
-        //    int timer = (int)gameSystem.enemySpawner.targetTime;
-        //    goalUI.text = timer.ToString() + "s left";
-        //}
-
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(gameSystem.waveLevel)
         {
-            SceneManager.LoadScene(0);
+            int enemyCounter = gameSystem.maxEnemies - gameSystem.enemiesKilled;
+            goalUI.text = "x" + enemyCounter.ToString();
         }
+        else if (gameSystem.timeLevel)
+        {
+            int timer = (int)gameSystem.enemySpawner.targetTime;
+            goalUI.text = timer.ToString() + "s left";
+        }
+
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
     }
 
     private void OnEnable()
@@ -54,6 +54,11 @@ public class UIManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(2);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
