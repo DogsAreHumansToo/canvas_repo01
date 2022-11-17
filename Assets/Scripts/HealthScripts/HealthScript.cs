@@ -8,13 +8,17 @@ public class HealthScript : MonoBehaviour
     public static event Action onPlayerDeath;
     public GameObject hitSparkObject;
     Animator animatorHitSpark;
+    public AudioSource playerHitSound;
 
+    private GameObject player;
+    
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private void Start()
     {
         animatorHitSpark = hitSparkObject.gameObject.GetComponent<Animator>();
-
+        player = gameObject.GetComponent<GameObject>();
+        playerHitSound = player.GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -24,6 +28,7 @@ public class HealthScript : MonoBehaviour
     //Player Taking Damage
     public void TakeDamage(float _Damage)
     {
+        playerHitSound.Play();
         animatorHitSpark.SetTrigger("Hurt");
         currentHealth = Mathf.Clamp(currentHealth - _Damage, 0, startingHealth);
 

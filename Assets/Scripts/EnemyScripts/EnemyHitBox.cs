@@ -27,7 +27,7 @@ public class EnemyHitBox : MonoBehaviour
         cameraShake = FindObjectOfType<ScreenShakeController>();
         animator = GetComponent<Animator>();
         gameSystem = FindObjectOfType<GameSystem>();
-        playerHitSound = GetComponent<AudioSource>();
+        playerHitSound = FindObjectOfType<AudioSource>();
         animatorHitSpark = hitSparkEmpty.gameObject.GetComponent<Animator>();
     }
 
@@ -55,13 +55,13 @@ public class EnemyHitBox : MonoBehaviour
         StartCoroutine(cameraShake.Shake(.04f, .03f));
         animator.SetTrigger("Hurt");
         animatorHitSpark.SetTrigger("Hurt");
+        playerHitSound.Play();
 
         if (currentHealth <= 0)
         {
             Die();
         }
         
-        playerHitSound.Play();
     }
 
     public void Die()
