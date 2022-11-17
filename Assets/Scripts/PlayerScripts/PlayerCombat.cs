@@ -76,11 +76,13 @@ public class PlayerCombat : MonoBehaviour
     private void DisableAttack()
     {
         nextAttackTime = 50f;
+        attackDamage = 0;
     }
 
     private void EnableAttack()
     {
         nextAttackTime = 0f;
+        attackDamage = 50;
     }
 
     void Attack()

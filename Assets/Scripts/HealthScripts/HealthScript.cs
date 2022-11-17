@@ -19,7 +19,7 @@ public class HealthScript : MonoBehaviour
     {
         animatorHitSpark = hitSparkObject.gameObject.GetComponent<Animator>();
         player = gameObject.GetComponent<GameObject>();
-        playerHitSound = player.GetComponent<AudioSource>();
+        //playerHitSound = player.GetComponent<AudioSource>();
     }
     private void Awake()
     {
