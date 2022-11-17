@@ -89,5 +89,23 @@ public class PlayerMovementScript : MonoBehaviour
     {
         body.bodyType = RigidbodyType2D.Dynamic;
     }
-  
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Barrier")
+        {
+            Vector3 pushBack = new Vector3(0.3f,0.0f,0.0f);
+            if(transform.position.x > 0)
+            {
+                pushBack.x = -pushBack.x;
+            }
+            else
+            {
+                Mathf.Abs(pushBack.x);
+            }
+
+            transform.position = transform.position + pushBack;
+            Debug.Log("Barrier");
+        }
+    }
 }
