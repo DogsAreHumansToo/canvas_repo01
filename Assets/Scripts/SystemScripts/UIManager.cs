@@ -25,10 +25,10 @@ public class UIManager : MonoBehaviour
             goalUI.text = timer.ToString() + "s left";
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
     }
 
     private void OnEnable()
