@@ -3555,9 +3555,17 @@ PrefabInstance:
       propertyPath: unlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6915126535767597767, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: abilityUI
+      value: 
+      objectReference: {fileID: 1905699789}
     - target: {fileID: -6665936045746915742, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
       propertyPath: unlocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6665936045746915742, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: abilityUI
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1748640805870423204, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
       propertyPath: m_BodyType

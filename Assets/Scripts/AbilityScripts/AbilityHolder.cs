@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityHolder : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class AbilityHolder : MonoBehaviour
     float cooldownTime;
     float activeTime;
     public bool unlocked = false;
-
+    public Image abilityUI;
+    public bool onCoolDown;
     enum AbilityState
     {
         ready,
@@ -37,6 +39,7 @@ public class AbilityHolder : MonoBehaviour
                         ability.Activate(gameObject);
                         state = AbilityState.active;
                         activeTime = ability.activeTime;
+                        
                     }
                     break;
                 case AbilityState.active:
@@ -55,9 +58,11 @@ public class AbilityHolder : MonoBehaviour
                     if (cooldownTime > 0)
                     {
                         cooldownTime -= Time.deltaTime;
+                        abilityUI.enabled = false;
                     }
                     else
                     {
+                        abilityUI.enabled = true;
                         state = AbilityState.ready;
                     }
                     break;
