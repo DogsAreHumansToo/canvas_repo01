@@ -68,6 +68,8 @@ public class EnemyHitBox : MonoBehaviour
         }
         Debug.Log("Enemy died!");
 
+        BGAlphaChange bGAlphaChange = FindObjectOfType<BGAlphaChange>();
+        bGAlphaChange.MoreTransparency();
         
         Debug.Log(gameSystem.enemiesKilled);
 
