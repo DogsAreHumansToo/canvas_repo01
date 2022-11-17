@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSparkObject: {fileID: 2091535453198286068}
+  animator: {fileID: 606125528465887725}
+  playerHitSound: {fileID: 0}
   startingHealth: 10
 --- !u!114 &1748640805870423214
 MonoBehaviour:
@@ -211,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: 51236e8d98396ed4ea5743a6a36b6081, type: 2}
+  unlocked: 0
   key: 113
 --- !u!114 &-6915126535767597767
 MonoBehaviour:
@@ -225,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: 04c7000f8d885ee43bc6f7219350d856, type: 2}
+  unlocked: 0
   key: 304
 --- !u!1 &2091535453198286068
 GameObject:
