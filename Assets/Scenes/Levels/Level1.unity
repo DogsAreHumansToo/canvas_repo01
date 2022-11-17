@@ -3642,6 +3642,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 232023168}
     - target: {fileID: 1748640805870423215, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 783472620}
+    - target: {fileID: 1748640805870423215, guid: 95d2f17d7939ae745a8ad7930bd0550a, type: 3}
       propertyPath: playerHitSound
       value: 
       objectReference: {fileID: 215328827}

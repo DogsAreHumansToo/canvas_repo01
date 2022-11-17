@@ -8,6 +8,7 @@ public class HealthScript : MonoBehaviour
     public static event Action onPlayerDeath;
     public GameObject hitSparkObject;
     Animator animatorHitSpark;
+    public Animator animator;
     public AudioSource playerHitSound;
 
     private GameObject player;
@@ -29,6 +30,7 @@ public class HealthScript : MonoBehaviour
     public void TakeDamage(float _Damage)
     {
         playerHitSound.Play();
+        animator.SetTrigger("ShadHurt");
         animatorHitSpark.SetTrigger("Hurt");
         currentHealth = Mathf.Clamp(currentHealth - _Damage, 0, startingHealth);
 
