@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6797914849298175691}
   m_Layer: 0
   m_Name: RubbishBag
-  m_TagString: obstacle
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,4 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 200
   Clockwise: 1
+  playerMovement: {fileID: 0}
   _spawner: {fileID: 0}
+  player: {fileID: 0}
+  damage: 1
