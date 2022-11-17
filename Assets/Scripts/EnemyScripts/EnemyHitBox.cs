@@ -11,6 +11,8 @@ public class EnemyHitBox : MonoBehaviour
     public GameSystem gameSystem;
     public bool isBoss;
 
+    
+
     PlayerCombat killCount;
     private EnemySpawnerFixed enemySpawner; //
 
@@ -24,6 +26,8 @@ public class EnemyHitBox : MonoBehaviour
         currentHealth = maxHealth;
         cameraShake = FindObjectOfType<ScreenShakeController>();
         animator = GetComponent<Animator>();
+        gameSystem = FindObjectOfType<GameSystem>();
+        
         animatorHitSpark = hitSparkEmpty.gameObject.GetComponent<Animator>();
     }
 
@@ -51,7 +55,7 @@ public class EnemyHitBox : MonoBehaviour
         StartCoroutine(cameraShake.Shake(.04f, .03f));
         animator.SetTrigger("Hurt");
         animatorHitSpark.SetTrigger("Hurt");
-
+        
 
         if (currentHealth <= 0)
         {

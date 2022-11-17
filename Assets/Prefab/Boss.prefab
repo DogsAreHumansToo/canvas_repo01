@@ -258,6 +258,7 @@ MonoBehaviour:
   hitSparkEmpty: {fileID: 5504081336594151363}
   gameSystem: {fileID: 0}
   isBoss: 1
+  playerHitSound: {fileID: 0}
 --- !u!114 &5284084692122918767
 MonoBehaviour:
   m_ObjectHideFlags: 0
