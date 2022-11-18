@@ -49,24 +49,28 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if(!PauseMenuScript.isPaused)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Time.time >= nextAttackTime)
             {
-                animator = player.GetComponent<Animator>() ;
-                animator.Play("ShadPunch");
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
-                
-                Debug.Log("attack");
-                missedAttack.Play();
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    animator = player.GetComponent<Animator>();
+                    animator.Play("ShadPunch");
+                    Attack();
+                    nextAttackTime = Time.time + 1f / attackRate;
 
+                    Debug.Log("attack");
+                    missedAttack.Play();
+
+                }
+                //else
+                //{
+                //    player.gameObject.GetComponent<SpriteRenderer>().sprite = idleState;
+                //}
             }
-            //else
-            //{
-            //    player.gameObject.GetComponent<SpriteRenderer>().sprite = idleState;
-            //}
         }
+        
     }
     private void Start()
     {
