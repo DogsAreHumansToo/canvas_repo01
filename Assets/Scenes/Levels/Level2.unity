@@ -780,7 +780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &192479858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5015,7 +5015,7 @@ MonoBehaviour:
   waveLevel: 0
   timeLevel: 1
   enemiesKilled: 0
-  completeLevelUI: {fileID: 0}
+  completeLevelUI: {fileID: 192479857}
   player: {fileID: 1748640805558956996}
   boss: {fileID: 8363825354520110549, guid: a36dbfc698e55d24d8675991908bf840, type: 3}
   currentPoint: {fileID: 239063299}
