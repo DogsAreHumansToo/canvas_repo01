@@ -183,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Move Left - A / Left Arrow
 
-    Move Right- d / Right Arrow
+    Move Right- D / Right Arrow
 
     Dash
     - Shift
@@ -1199,7 +1199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1209225747
 Transform:
   m_ObjectHideFlags: 0
@@ -1845,7 +1845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1929657407
 Transform:
   m_ObjectHideFlags: 0
