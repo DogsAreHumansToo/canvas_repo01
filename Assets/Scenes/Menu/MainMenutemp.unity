@@ -1412,8 +1412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.2, y: 152.6}
-  m_SizeDelta: {x: 339.5145, y: 93.578}
+  m_AnchoredPosition: {x: -29, y: 182}
+  m_SizeDelta: {x: 475.2089, y: 130.9785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1325015263
 MonoBehaviour:
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'OPTION
+  m_text: 'CONTROLS
 
 '
   m_isRightToLeft: 0
@@ -1840,7 +1840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929657407}
   m_Layer: 0
-  m_Name: OptionMenu
+  m_Name: ControlsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
