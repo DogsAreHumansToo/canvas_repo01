@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: New AS Ability
   m_EditorClassIdentifier: 
   cooldownTime: 10
-  activeTime: 2
-  multiplier: 2
+  activeTime: 4
+  multiplier: 4
+  canUseAbility: 1
