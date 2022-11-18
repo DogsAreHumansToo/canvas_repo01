@@ -10,7 +10,9 @@ public class AbilityHolder : MonoBehaviour
     float activeTime;
     public bool unlocked = false;
     public Image abilityUI;
-    public bool onCoolDown;
+    
+    public AudioSource abilityUpSound;
+    public AudioSource abilityUSESound;
     enum AbilityState
     {
         ready,
@@ -36,6 +38,7 @@ public class AbilityHolder : MonoBehaviour
                 case AbilityState.ready:
                     if (Input.GetKeyDown(key))
                     {
+                        abilityUSESound.Play();
                         ability.Activate(gameObject);
                         state = AbilityState.active;
                         activeTime = ability.activeTime;
@@ -63,6 +66,7 @@ public class AbilityHolder : MonoBehaviour
                     else
                     {
                         abilityUI.enabled = true;
+                        abilityUpSound.Play();
                         state = AbilityState.ready;
                     }
                     break;

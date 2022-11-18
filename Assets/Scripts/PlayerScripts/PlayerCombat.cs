@@ -76,19 +76,20 @@ public class PlayerCombat : MonoBehaviour
     private void DisableAttack()
     {
         nextAttackTime = 50f;
+        attackRate = 0;
+        attackDamage = 0;
     }
 
     private void EnableAttack()
     {
         nextAttackTime = 0f;
+        attackDamage = 50;
+        attackRate = 4f;
     }
 
     void Attack()
     {
-        //Play attack animation
-        //animator.SetTrigger("ShadPunch");
-
-
+      
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
