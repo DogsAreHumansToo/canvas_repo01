@@ -147,5 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 100
-  Clockwise: 0
+  Clockwise: 1
+  playerMovement: {fileID: 0}
   _spawner: {fileID: 0}
+  player: {fileID: 0}
+  damage: 1

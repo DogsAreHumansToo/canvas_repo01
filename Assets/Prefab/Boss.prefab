@@ -135,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8363825354520110549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.766, y: -0.9457, z: 0}
+  m_LocalScale: {x: 0.7386, y: 0.7286, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5030138110137519325}
@@ -258,7 +258,6 @@ MonoBehaviour:
   hitSparkEmpty: {fileID: 5504081336594151363}
   gameSystem: {fileID: 0}
   isBoss: 1
-  playerHitSound: {fileID: 0}
 --- !u!114 &5284084692122918767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,8 +274,10 @@ MonoBehaviour:
   speed: 6
   damage: 1
   playerMovement: {fileID: 0}
+  boss: 1
   playerCounter: {fileID: 0}
   dazedTime1: 0.1
+  animator: {fileID: -5015561790833575632}
 --- !u!95 &-5015561790833575632
 Animator:
   serializedVersion: 4
