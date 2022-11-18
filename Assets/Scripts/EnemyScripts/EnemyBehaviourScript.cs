@@ -11,9 +11,12 @@ public class EnemyBehaviourScript : MonoBehaviour
     public PlayerMovementScript playerMovement;
 
     bool facingRight = true;
+    public bool boss;
     private ScreenShakeController cameraShake;
     [SerializeField] private PlayerCombat playerCounter;
     public float dazedTime1;
+
+    public Animator animator;
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -21,18 +24,37 @@ public class EnemyBehaviourScript : MonoBehaviour
     }
     private void Update()
     {
-        
-        Vector2 playerPosition = player.transform.position;
-        playerPosition.y += 0.9f;
-        transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, speed * Time.deltaTime);
+        if (boss == true)
+        {
+            Vector2 playerPosition = player.transform.position;
+            playerPosition.y += 0.9f;
+            transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, speed * Time.deltaTime);
+            animator.SetFloat("Speed", Mathf.Abs(speed));
 
-        if (player.transform.position.x - this.transform.position.x < 0 && !facingRight)
-        {
-            flip();
+            if (player.transform.position.x - this.transform.position.x < 0 && !facingRight)
+            {
+                flip();
+            }
+            else if (player.transform.position.x - this.transform.position.x > 0 && facingRight)
+            {
+                flip();
+            }
         }
-        else if (player.transform.position.x - this.transform.position.x > 0 && facingRight)
+        if (boss == false)
         {
-            flip();
+            Vector2 playerPosition = player.transform.position;
+            playerPosition.y += 0.9f;
+            transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, speed * Time.deltaTime);
+            
+
+            if (player.transform.position.x - this.transform.position.x < 0 && !facingRight)
+            {
+                flip();
+            }
+            else if (player.transform.position.x - this.transform.position.x > 0 && facingRight)
+            {
+                flip();
+            }
         }
     }
 

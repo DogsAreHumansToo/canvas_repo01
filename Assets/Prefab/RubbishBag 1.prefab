@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 200
-  Clockwise: 1
+  Clockwise: 0
   playerMovement: {fileID: 0}
   _spawner: {fileID: 0}
   player: {fileID: 0}
