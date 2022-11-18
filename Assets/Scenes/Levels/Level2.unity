@@ -2573,7 +2573,7 @@ MonoBehaviour:
   maxEnemiesInRoom: 3
   enemiesInRoom: 0
   toggleTimer: 1
-  targetTime: 30
+  targetTime: 15
   spawnerDone: 0
   spawnerDoneGameObject: {fileID: 1201341489}
   spawnerON: 1
@@ -6732,7 +6732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: targetTime
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8494645807990882910, guid: dd4155f29212a9346846da3f13141386, type: 3}
       propertyPath: maxEnemiesInRoom
