@@ -2266,10 +2266,10 @@ MonoBehaviour:
   - {fileID: 2038093639}
   enemies:
   - {fileID: 4292251446885821954, guid: 100ccfe4e255d5b46ad2ce0e8471de9e, type: 3}
-  minTimeBtwSpawns: 1
+  minTimeBtwSpawns: 0.5
   maxTimeBtwSpawns: 1.5
   canSpawn: 1
-  maxEnemies: 10
+  maxEnemies: 15
   maxEnemiesInRoom: 3
   enemiesInRoom: 0
   toggleTimer: 0
@@ -4455,7 +4455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c615a39292843488df7573c013a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 10
+  maxEnemies: 15
   waveLevel: 1
   timeLevel: 0
   enemiesKilled: 0
